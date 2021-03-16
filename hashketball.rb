@@ -135,10 +135,11 @@ def num_points_scored(name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |stats|
       if stats[:player_name] == name
-         return points_scored = stats[:points]
+         points_scored = stats[:points]
        end
     end
   end
+  points_scored
 end
 
 
@@ -147,10 +148,11 @@ def shoe_size(name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |stats|
       if stats[:player_name] == name
-        return size = stats[:shoe]
+        size = stats[:shoe]
       end
     end  
   end
+  size
 end
 
 
@@ -211,6 +213,14 @@ def big_shoe_rebounds
   most_rebounds
 end
 
+def most_points_scored
+  most_points = 0 
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |stats|
+      binding.pry
+    end 
+  end
+end
 
 
 # Write code here
